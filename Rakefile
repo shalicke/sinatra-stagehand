@@ -6,7 +6,7 @@ task :install do
   Dir.chdir(script_dir)
   puts 'Installing bower globally requires sudo.'
   system("sudo npm install bower -g")
-  system('bower install')
+  system('bower install sinatra-stagehand')
   Dir.chdir(script_dir + '/components/bootstrap')
   system('npm install')
   system('make && make bootstrap')
