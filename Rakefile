@@ -4,6 +4,7 @@ script_dir = File.expand_path(File.dirname(__FILE__))
 
 desc 'installs components'
 task :install_git do
+  system('npm install -g bower')
   Dir.chdir(script_dir)
   system('bower install')
   Dir.chdir(script_dir + '/components/bootstrap')
