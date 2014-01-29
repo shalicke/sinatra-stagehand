@@ -1,18 +1,10 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
+ruby '2.0.0'
 
-gem "sinatra"
-gem "sinatra-contrib"
-gem "sass"
-gem "haml"
-gem "mocha"
-gem "coffee-script"
-gem "therubyracer"
-gem "sprockets"
-gem "puma"
-gem "shotgun"
-
-# for those using persistence
-gem "data_mapper"
-
-# adjust as necessary
-gem "dm-sqlite-adapter"
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'haml'
+gem 'sprockets-less'
+gem 'less'
+gem 'coffee-script'
+gem 'puma'
