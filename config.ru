@@ -1,5 +1,8 @@
 require 'bundler/setup'
 
+require 'dotenv'
+Dotenv.load
+
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/contrib'
