@@ -15,7 +15,7 @@ require 'haml'
 map '/assets' do
   environment = Sprockets::Environment.new
   environment.append_path 'assets'
-  environment.append_path 'assets/components'
+  environment.append_path 'components'
   run environment
 end
 
