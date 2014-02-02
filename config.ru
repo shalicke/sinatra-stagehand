@@ -1,7 +1,9 @@
 require 'bundler/setup'
 
-require 'dotenv'
-Dotenv.load
+if File.exists?(File.expand_path('../.env', __FILE__))
+  require 'dotenv'
+  Dotenv.load
+end
 
 require 'sinatra'
 require 'sinatra/base'
