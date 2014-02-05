@@ -10,6 +10,13 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     commonjs (0.2.7)
+    coveralls (0.7.0)
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      term-ansicolor
+      thor
+    docile (1.1.2)
     dotenv (0.9.0)
     eventmachine (1.0.0)
     execjs (1.4.0)
@@ -28,7 +35,6 @@ GEM
     haml (4.0.0)
       tilt
     hike (1.2.3)
-    jsmin (1.0.1)
     less (2.3.3)
       commonjs (~> 0.2.6)
     libv8 (3.16.14.3)
@@ -38,6 +44,7 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
     method_source (0.8.2)
+    mime-types (2.1)
     minitest (5.2.2)
     multi_json (1.6.1)
     pry (0.9.12.6)
@@ -51,19 +58,31 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.1.1)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
     ref (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    sass (3.2.14)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
-    sinatra-assetpack (0.3.2)
-      jsmin
-      rack-test
+    sinatra-asset-pipeline (0.3.3)
+      coffee-script
+      rake
+      sass
       sinatra
-      tilt (>= 1.3.0, < 2.0)
+      sprockets
+      sprockets-helpers
+      sprockets-sass
     sinatra-contrib (1.3.2)
       backports (>= 2.0)
       eventmachine
@@ -77,21 +96,27 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-less (0.5.3)
-      less (~> 2.3.0)
+    sprockets-helpers (1.1.0)
+      sprockets (~> 2.0)
+    sprockets-sass (1.0.2)
+      sprockets (~> 2.0)
       tilt (~> 1.1)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
     tilt (1.3.3)
     timers (1.1.0)
+    tins (0.13.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coffee-script
+  coveralls
   dotenv
   guard-minitest
   haml
@@ -99,8 +124,6 @@ DEPENDENCIES
   minitest
   puma
   sinatra
-  sinatra-assetpack
+  sinatra-asset-pipeline
   sinatra-contrib
-  sprockets
-  sprockets-less
   therubyracer

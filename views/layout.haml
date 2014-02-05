@@ -3,7 +3,7 @@
   %head
     %meta{charset: "utf-8"}
     %title Sinatra Stagehand
-    %link{href: "/assets/application.css", rel:"stylesheet"}
-    %script{src: "/assets/application.js"}
+    != stylesheet_tag 'application'
+    != javascript_tag 'application'
   %body
     =yield

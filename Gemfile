@@ -3,10 +3,8 @@ ruby '2.0.0'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'sinatra-assetpack'
+gem 'sinatra-asset-pipeline'
 gem 'haml'
-gem 'sprockets'
-gem 'sprockets-less'
 gem 'less'
 gem 'coffee-script'
 gem 'puma'
@@ -16,5 +14,6 @@ gem 'dotenv'
 group :development, :test do
   gem 'minitest'
   gem 'guard-minitest'
+  gem 'coveralls'
 end
 
