@@ -1,42 +1,37 @@
-# Sinatra Stagehand
-
+Sinatra Stagehand
+=================
 sinatra-stagehand is nothing more than Sinatra and some extensions managed in a useful way.
 
-## Using
-    
-    git clone git://github.com/shalicke/sinatra-stagehand your_app_name
-    cd your_app_name
-    rake install_git
+## Requirements
+* [Node][6]
+* [Ruby][7] (>= 2.0.0)
 
-**Cleaning up** (will remove existing git repo and initialize a new one)
-
-    rake post_install
-
-## Bower
-Bower is used to manage and keep component packages updated.
-
-### Also available as a bower package itself
-
-    bower install sinatra-stagehand
-
-
-## 'Integrated' Components
-
+# Out of the Box
 * Sinatra
-* Bower
-* Twitter Bootstrap
-* jQuery
-* Sprockets / Asset Pipeline 
+* [Bower][1]
+* [Twitter Bootstrap][2]
+* [jQuery][3]
+* [Sprockets][4] (Asset Pipeline)
+* [Font Awesome][5]
 
-### Some default gems:
-* haml
-* sass
-* sprockets
-* puma
+## Usage
+To get a simple application setup and ready for hacking merely checkout and run
+a few commands to setup the dependencies.
 
-The layout uses haml / sprockets by default.
+        $ git clone https://github.com/johnbellone/sinatra-stagehand
+        $ cd sinatra-stagehand
+        $ bundle install --binstubs
+        $ bower install
 
-## Included, but not integrated
-* HTML5 Boilerplate
-* Font Awesome
+When additional packages are adding using [Bower][1] you merely need to run
+another `bower install` or if updating an existing package `bower update bootstrap`.
+The same obviously goes for any gems that are being utilized by the project.
 
+[0]: http://sinatrarb.com
+[1]: http://bower.io
+[2]: http://getbootstrap.com
+[3]: http://jquery.com
+[4]: https://github.com/sstephenson/sprockets
+[5]: http://fortawesome.github.io/Font-Awesome/
+[6]: http://nodejs.org
+[7]: http://ruby-lang.org

@@ -1,18 +1,19 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
+ruby '2.0.0'
 
-gem "sinatra"
-gem "sinatra-contrib"
-gem "sass"
-gem "haml"
-gem "mocha"
-gem "coffee-script"
-gem "therubyracer"
-gem "sprockets"
-gem "puma"
-gem "shotgun"
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sinatra-asset-pipeline'
+gem 'haml'
+gem 'less'
+gem 'coffee-script'
+gem 'puma'
+gem 'therubyracer'
+gem 'dotenv'
 
-# for those using persistence
-gem "data_mapper"
+group :development, :test do
+  gem 'minitest'
+  gem 'guard-minitest'
+  gem 'coveralls'
+end
 
-# adjust as necessary
-gem "dm-sqlite-adapter"

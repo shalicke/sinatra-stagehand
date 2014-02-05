@@ -1,17 +1,5 @@
-require 'bundler'
-Bundler.setup :default
-require 'sinatra/base'
-require 'sprockets'
-require './app'
+require 'sinatra'
+set :root, File.dirname(__FILE__)
 
-map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.append_path 'components/jquery' 
-  environment.append_path 'components/bootstrap/bootstrap/' 
-  environment.append_path 'assets'
-  run environment
-end
-
-map '/' do
-  run Sinatra::Application
-end
+require File.expand_path('../config/environment', __FILE__)
+run Stagehand.application
