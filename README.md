@@ -1,3 +1,10 @@
+# DEPRECATED
+
+I don't really use Ruby anymore for projects, and haven't paid attention to this in a long time. There have been many changes upstream with the entire set of packages this little setup provides, so there is most likely a much better way.
+
+It may come to pass that if I develop in Ruby more often I will feel a need to update/revisit this, but that is unlikely in the near future. Cheers.
+
+
 # Sinatra Stagehand
 
 sinatra-stagehand is nothing more than Sinatra and some extensions managed in a useful way.
